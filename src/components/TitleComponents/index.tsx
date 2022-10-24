@@ -1,13 +1,15 @@
 import * as S from './styles';
 
-export type TestProps = {
-    title: string;
+export type TitleComponentsProp = {
+    Word: string;
+    Image: string;
 };
 
-const Test: React.FC<TestProps> = ({ title }) => (
-    <S.Wrapper>
-        <p>{title}</p>
-    </S.Wrapper>
+const TitleComponent: React.FC<TitleComponentsProp> = ({ Word, Image }) => (
+    <S.TitleContainer>
+        <S.Logo src={Image} />
+        <S.Title>{Word}</S.Title>
+    </S.TitleContainer>
 );
 
-export default Test;
+export default TitleComponent;

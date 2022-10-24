@@ -1,20 +1,28 @@
 import styled from 'styled-components';
 
-export const TitleContainer = styled.div`
+interface SelectedProps {
+    selected: boolean;
+}
+
+export const Container = styled.div<SelectedProps>`
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px 0px 0px 40px;
-    gap: 10px;
+    gap: 4px;
     width: 264px;
     height: 56px;
+    background-color: ${(props) => (props.selected ? '#3856DC' : '#272727')};
 `;
 export const Title = styled.span`
     font-family: 'Nunito';
     font-style: normal;
-    font-weight: 200;
-    font-size: 36px;
-    color: #7b93ff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #e1e7ff;
 `;
 
 export const Logo = styled.img`
