@@ -29,8 +29,8 @@ const MainComponent: React.FC<MainComponentProps> = ({
                 <S.Text>{text}</S.Text>
                 <S.Interactions>
                     <S.Likes src={comments} />
-                    <S.Likes src={rp} />
-                    <S.Likes src={like} />
+                    <S.Rp src={rp} />
+                    <S.Comments src={like} />
                 </S.Interactions>
             </S.PiuContainer>
         </S.Container>

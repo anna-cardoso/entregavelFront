@@ -12,7 +12,7 @@ export const Container = styled.div`
     border-radius: 24px;
 `;
 export const PiuContainer = styled.div`
-    display: flex;
+    display: table-row;
     flex-direction: column;
     text-align: initial;
     padding: 8px 16px 8px 16px;
@@ -36,24 +36,30 @@ export const NameUser = styled.div`
 `;
 export const Interactions = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 33%;
-    width: 100%;
+    gap: 192px;
 `;
-export const Text = styled.span`
+export const Text = styled.div`
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    display: flex;
 `;
 export const Image = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     padding-left: 4px;
 `;
 export const Likes = styled.img`
+    width: 24px;
+    height: 24px;
+`;
+export const Rp = styled.img`
+    width: 24px;
+    height: 24px;
+`;
+export const Comments = styled.img`
     width: 24px;
     height: 24px;
 `;

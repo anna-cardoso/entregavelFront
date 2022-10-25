@@ -21,17 +21,16 @@ const HomeTemplate = () => {
     const [postArray, setPostArray] = useState<InterfacePosts[]>([
         {
             text: 'only love can hurt like this... only love can hurt like this',
-            image: '/assets/icon.svg',
+            image: '/assets/artur.svg',
             user: '@artadsm',
             name: 'Artur Anacleto',
             like: '/assets/amei.svg',
             rp: '/assets/rt-icon.svg',
             comments: '/assets/balao-chat.svg'
         },
-
         {
             text: 'NÃO há imoralidade em furar a fila do bandejão quem não defende é porque não tem amigos',
-            image: '/assets/icon.svg',
+            image: '/assets/pedro.svg',
             user: '@pebaiano',
             name: 'Pedro Souza',
             like: '/assets/amei.svg',
@@ -41,9 +40,18 @@ const HomeTemplate = () => {
 
         {
             text: 'oiiiii (na intencao de furar a fila do bandejao',
-            image: '/assets/icon.svg',
+            image: '/assets/anna.svg',
             user: '@nnakarol',
             name: 'Anna Karoline',
+            like: '/assets/amei.svg',
+            rp: '/assets/rt-icon.svg',
+            comments: '/assets/balao-chat.svg'
+        },
+        {
+            text: '3,14159265358979323846164338327950288419726939937510582',
+            image: '/assets/artur2.svg',
+            user: '@Ntutsdoscrias',
+            name: 'Arthur Maia',
             like: '/assets/amei.svg',
             rp: '/assets/rt-icon.svg',
             comments: '/assets/balao-chat.svg'

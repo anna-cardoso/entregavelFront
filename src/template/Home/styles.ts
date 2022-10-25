@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const MainBody = styled.div`
-    min-height: 100vh;
-    width: 100%;
-    height: 100vh;
+    height: 100vmax;
     display: flex;
     justify-content: center;
     background-color: #272727;
@@ -41,20 +39,15 @@ export const Profile = styled.img`
     height: 64px;
 `;
 export const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: center;
-    width: 64%;
-    position: relative;
-    background: #272727;
-    gap: 8px;
+    gap: 16px;
+    padding: 24px 0px 16px 0px;
+    justify-content: center;
 `;
 export const SubMainContainer = styled.div`
     display: flex;
     width: 100%;
-    gap: 16px;
-    padding: 8px 32px 8px 32px;
+    gap: 32px;
+    padding: 0px 32px 8px 32px;
     justify-content: space-between;
     flex-direction: column;
 `;
@@ -74,22 +67,24 @@ export const Search = styled.input`
 export const PiuWriteContainer = styled.div`
     display: flex;
     width: 800px;
-    height: 144px;
+    height: 128px;
     padding: 8px 24px 8px 32px;
     justify-content: space-between;
     flex-direction: column;
-    border-radius: 16px;
     background: #9198b4;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16), 0px 3px 3px rgba(0, 0, 0, 0.16),
+        0px 1px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
 `;
 export const PiuInput = styled.input`
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 380;
-    font-size: 24px;
-    color: #000000;
-    border: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 24px 8px 32px;
+    gap: 360px;
+    width: 100%;
     height: 80%;
     background: none;
+    border: none;
 `;
 export const SendButton = styled.button`
     font-size: 16px;
