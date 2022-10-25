@@ -4,7 +4,6 @@ import MainComponent from 'components/MainComponents';
 import NewsComponent from 'components/NewsComponents';
 
 import { useState } from 'react';
-
 import * as S from './styles';
 import { Profile } from './styles';
 
@@ -25,9 +24,9 @@ const HomeTemplate = () => {
             image: '/assets/icon.svg',
             user: '@artadsm',
             name: 'Artur Anacleto',
-            like: '3',
-            rp: '2',
-            comments: '1'
+            like: '/assets/amei.svg',
+            rp: '/assets/rt-icon.svg',
+            comments: '/assets/balao-chat.svg'
         },
 
         {
@@ -35,18 +34,19 @@ const HomeTemplate = () => {
             image: '/assets/icon.svg',
             user: '@pebaiano',
             name: 'Pedro Souza',
-            like: '5',
-            rp: '3',
-            comments: '1'
+            like: '/assets/amei.svg',
+            rp: '/assets/rt-icon.svg',
+            comments: '/assets/balao-chat.svg'
         },
+
         {
             text: 'oiiiii (na intencao de furar a fila do bandejao',
             image: '/assets/icon.svg',
             user: '@nnakarol',
             name: 'Anna Karoline',
-            like: '27',
-            rp: '3',
-            comments: '12'
+            like: '/assets/amei.svg',
+            rp: '/assets/rt-icon.svg',
+            comments: '/assets/balao-chat.svg'
         }
     ]);
     const [text2, setText] = useState('Quero dar um Piu');
@@ -59,9 +59,9 @@ const HomeTemplate = () => {
                 image: '/assets/icon.svg',
                 user: '@nnakarol',
                 name: 'Anna Karoline',
-                like: '0',
-                rp: '0',
-                comments: '0'
+                like: '/assets/amei.svg',
+                rp: '/assets/rt-icon.svg',
+                comments: '/assets/balao-chat.svg'
             },
             ...postArray
         ]);
@@ -114,16 +114,18 @@ const HomeTemplate = () => {
                 </S.SideBarContainer>
 
                 <S.MainContainer>
-                    <S.SearchContainer>
+                    <S.SubMainContainer>
                         <S.Search value="Quero ouvir um Piu" />
-                    </S.SearchContainer>
-                    <S.PiuWriteContainer>
-                        <S.PiuInput
-                            value={text2}
-                            onChange={(e) => setText(e.target.value)}
-                        />
-                        <S.SendButton onClick={handleClick}>Send</S.SendButton>
-                    </S.PiuWriteContainer>
+                        <S.PiuWriteContainer>
+                            <S.PiuInput
+                                value={text2}
+                                onChange={(e) => setText(e.target.value)}
+                            />
+                            <S.SendButton onClick={handleClick}>
+                                Send
+                            </S.SendButton>
+                        </S.PiuWriteContainer>
+                    </S.SubMainContainer>
                     <S.MainCont>
                         {postArray.map((post) => (
                             <MainComponent

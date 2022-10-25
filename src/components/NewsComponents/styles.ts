@@ -4,13 +4,13 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 64px 0px 0px 24px;
-    gap: 16px;
+    padding: 32px 0px 0px 8px;
+    gap: 8px;
     width: 200px;
     height: 56px;
 `;
 export const TextContainer = styled.div`
-    padding-top: 16px;
+    padding-top: 8px;
     gap: 4px;
     align-items: space-between;
     display: flex;
@@ -22,8 +22,8 @@ export const TextContainer = styled.div`
 export const Title = styled.span`
     font-family: 'Nunito';
     font-style: normal;
-    font-weight: 160;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 18px;
     display: flex;
     align-items: center;
     color: #e1e7ff;
@@ -36,9 +36,7 @@ export const Logo = styled.img`
 export const Word = styled.span`
     font-family: 'Nunito';
     font-style: normal;
-    font-weight: 96;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
     color: #e1e7ff;
 `;

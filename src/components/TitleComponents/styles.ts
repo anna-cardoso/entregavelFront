@@ -4,7 +4,7 @@ export const TitleContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px 0px 0px 40px;
+    padding: 8px 0px 0px 16px;
     gap: 10px;
     width: 264px;
     height: 56px;
@@ -18,8 +18,8 @@ export const Title = styled.span`
 `;
 
 export const Logo = styled.img`
-    left: 8.33%;
-    right: 8.33%;
-    top: 8.33%;
-    bottom: 8.33%;
+    left: 8%;
+    right: 8%;
+    top: 8%;
+    bottom: 8%;
 `;

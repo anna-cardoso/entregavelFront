@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const MainBody = styled.div`
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    align-items: space-between;
+    justify-content: center;
+    background-color: #272727;
 `;
 export const SideBarContainer = styled.div`
     display: flex;
@@ -14,24 +15,25 @@ export const SideBarContainer = styled.div`
     align-items: center;
     width: 18%;
     background-color: #272727;
-    border-right-width: 2px solid #55596b;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-color: #55596b;
     left: 0px;
+    gap: 4px;
     position: fixed;
 `;
 export const NavBarContainer = styled.div`
     display: flex;
+    width: 80%;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0p 56p 0px 0px;
-    height: 336px;
 `;
 export const ProfileContainer = styled.div`
     display: flex;
     position: bottom;
     margin-top: 72px;
-    padding: 64px 128px 64px128px;
+    padding: 64px 128px 64px 128px;
     flex-direction: column;
-    height: 192px;
 `;
 export const Profile = styled.img`
     border-radius: 50%;
@@ -42,32 +44,32 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-content: center;
     width: 64%;
-    height: 100vh;
-    padding-top: 8px;
-    background-color: #272727;
-    position: absolute;
-    left: 18%;
+    position: relative;
+    background: #272727;
+    gap: 8px;
 `;
-export const SearchContainer = styled.div`
+export const SubMainContainer = styled.div`
     display: flex;
-    width: 800px;
-    height: 64px;
-    padding: 8px 24px 8px 32px;
+    width: 100%;
+    gap: 16px;
+    padding: 8px 32px 8px 32px;
     justify-content: space-between;
     flex-direction: column;
-    border-radius: 16px;
-    background: #9198b4;
 `;
 export const Search = styled.input`
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 100%;
-    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px 8px 32px;
+    gap: 360px;
+    width: 100%;
+    height: 64px;
     background: #9198b4;
-    border: none;
-    height: 80%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16), 0px 3px 3px rgba(0, 0, 0, 0.16),
+        0px 1px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
 `;
 export const PiuWriteContainer = styled.div`
     display: flex;
@@ -102,6 +104,8 @@ export const PiuImageContainer = styled.button`
     flex-direction: row;
     gap: 32px;
     flex-direction: row;
+    background-image: src= '/assets/send.svg';
+    position: right;
 `;
 export const PiuWriteButton = styled.img`
     width: 16px;

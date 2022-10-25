@@ -10,9 +10,11 @@ export const Container = styled.div<SelectedProps>`
     align-items: center;
     padding: 0px 0px 0px 40px;
     gap: 4px;
-    width: 264px;
+    width: 100%;
     height: 56px;
     background-color: ${(props) => (props.selected ? '#3856DC' : '#272727')};
+    border-radius: ${(props) =>
+        props.selected ? '0px 16px 16px 0px' : '0px 0px 0px 0px'};
 `;
 export const Title = styled.span`
     font-family: 'Nunito';

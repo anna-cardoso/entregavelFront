@@ -24,14 +24,13 @@ const MainComponent: React.FC<MainComponentProps> = ({
             <S.Image src={image} />
             <S.PiuContainer>
                 <S.NameUser>
-                    <S.Name>{name}</S.Name>
-                    <S.User>{user}</S.User>
+                    {name} {user}
                 </S.NameUser>
                 <S.Text>{text}</S.Text>
                 <S.Interactions>
-                    <S.Comments>{comments}</S.Comments>
-                    <S.Rp>{rp}</S.Rp>
-                    <S.Likes>{like}</S.Likes>
+                    <S.Likes src={comments} />
+                    <S.Likes src={rp} />
+                    <S.Likes src={like} />
                 </S.Interactions>
             </S.PiuContainer>
         </S.Container>
