@@ -28,7 +28,7 @@ export const NameUser = styled.div`
     gap: 8px;
     position: top;
     justify-content: space-between;
-    padding-bottom: 32px;
+    padding-bottom: 24px;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
@@ -39,6 +39,7 @@ export const Interactions = styled.div`
     gap: 192px;
 `;
 export const Text = styled.div`
+    padding-bottom: 16px;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
