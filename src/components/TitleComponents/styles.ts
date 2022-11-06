@@ -8,6 +8,9 @@ export const TitleContainer = styled.div`
     gap: 10px;
     width: 264px;
     height: 56px;
+
+    @media only screen and (min-width: 768px) {
+    }
 `;
 export const Title = styled.span`
     font-family: 'Nunito';
