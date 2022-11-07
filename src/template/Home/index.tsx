@@ -2,77 +2,25 @@ import NavComponent from 'components/NavComponents';
 import TitleComponent from 'components/TitleComponents';
 import MainComponent from 'components/MainComponents';
 import NewsComponent from 'components/NewsComponents';
-
-import { useState } from 'react';
+import PiuServices from 'services/PiuServices';
+import { Piu } from 'interfaces/Piu';
+import { useEffect, useState } from 'react';
 import * as S from './styles';
 import { Profile } from './styles';
 
 const HomeTemplate = () => {
-    interface InterfacePosts {
-        text: string;
-        image: string;
-        user: string;
-        name: string;
-        like: string;
-        rp: string;
-        comments: string;
-    }
-
-    const [postArray, setPostArray] = useState<InterfacePosts[]>([
-        {
-            text: 'only love can hurt like this... only love can hurt like this',
-            image: '/assets/artur.svg',
-            user: '@artadsm',
-            name: 'Artur Anacleto',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        },
-        {
-            text: 'NÃO há imoralidade em furar a fila do bandejão quem não defende é porque não tem amigos',
-            image: '/assets/pedro.svg',
-            user: '@pebaiano',
-            name: 'Pedro Souza',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        },
-
-        {
-            text: 'oiiiii (na intencao de furar a fila do bandejao)',
-            image: '/assets/anna.svg',
-            user: '@annakarol',
-            name: 'Anna Karoline',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        },
-        {
-            text: '3,141592653589793238461 64338327950288419726939937510582',
-            image: '/assets/artur2.svg',
-            user: '@Ntutsdoscrias',
-            name: 'Arthur Maia',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        }
-    ]);
+    const [piusArray, setPiusArray] = useState<Piu[]>([]);
+    useEffect(() => {
+        const asyncFunction = async () => {
+            const response = await PiuServices.getPius();
+            setPiusArray(response);
+        };
+        asyncFunction();
+    }, []);
     const [text2, setText] = useState('Quero dar um Piu');
 
     function handleClick() {
         setText(text2);
-        setPostArray([
-            {
-                text: text2,
-                image: '/assets/icon.svg',
-                user: '@nnakarol',
-                name: 'Anna Karoline',
-                like: '/assets/amei.svg',
-                rp: '/assets/rt-icon.svg',
-                comments: '/assets/balao-chat.svg'
-            },
-            ...postArray
-        ]);
         setText(' ');
     }
 
@@ -135,15 +83,15 @@ const HomeTemplate = () => {
                         </S.PiuWriteContainer>
                     </S.SubMainContainer>
                     <S.MainCont>
-                        {postArray.map((post) => (
+                        {piusArray.map((post) => (
                             <MainComponent
                                 text={post.text}
-                                image={post.image}
-                                user={post.user}
-                                name={post.name}
-                                like={post.like}
-                                rp={post.rp}
-                                comments={post.comments}
+                                image="/assets/anna.svg"
+                                user={post.user.username}
+                                name={post.user.first_name}
+                                like="3"
+                                rp="2"
+                                comments="2"
                             />
                         ))}
                     </S.MainCont>
