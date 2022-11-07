@@ -34,23 +34,59 @@ export const NameUser = styled.div`
     font-weight: 700;
     font-size: 16px;
 `;
-export const Interactions = styled.div`
-    display: flex;
-    gap: 192px;
-`;
+
 export const Text = styled.div`
     padding-bottom: 16px;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    display: flex;
+    width: 100%;
 `;
 export const Image = styled.img`
-    width: 80px;
-    height: 80px;
+    @media only screen and (min-width: 800px) {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        padding-left: 4px;
+    }
+
+    witdh: 64px;
+    height: 64px;
     border-radius: 50%;
-    padding-left: 4px;
+    padding-left: 2px;
+`;
+export const Interactions = styled.div`
+    @media only screen and (min-width: 800px) {
+        display: flex;
+        gap: 100px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1080px) {
+        display: flex;
+        gap: 140px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1240px) {
+        display: flex;
+        gap: 180px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1380px) {
+        display: flex;
+        gap: 200px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1500px) {
+        display: flex;
+        gap: 280px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1800px) {
+        display: flex;
+        gap: 380px;
+        width: 100%;
+    }
 `;
 export const Likes = styled.img`
     width: 24px;

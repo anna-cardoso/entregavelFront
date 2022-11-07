@@ -39,16 +39,16 @@ const HomeTemplate = () => {
         },
 
         {
-            text: 'oiiiii (na intencao de furar a fila do bandejao',
+            text: 'oiiiii (na intencao de furar a fila do bandejao)',
             image: '/assets/anna.svg',
-            user: '@nnakarol',
+            user: '@annakarol',
             name: 'Anna Karoline',
             like: '/assets/amei.svg',
             rp: '/assets/rt-icon.svg',
             comments: '/assets/balao-chat.svg'
         },
         {
-            text: '3,14159265358979323846164338327950288419726939937510582',
+            text: '3,141592653589793238461 64338327950288419726939937510582',
             image: '/assets/artur2.svg',
             user: '@Ntutsdoscrias',
             name: 'Arthur Maia',
