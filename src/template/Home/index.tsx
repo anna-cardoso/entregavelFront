@@ -9,6 +9,16 @@ import * as S from './styles';
 import { Profile } from './styles';
 
 const HomeTemplate = () => {
+    interface InterfacePosts {
+        text: string;
+        image: string;
+        user: string;
+        name: string;
+        like: string;
+        rp: string;
+        comments: string;
+    }
+    const [postArray, setPostArray] = useState<InterfacePosts[]>([]);
     const [piusArray, setPiusArray] = useState<Piu[]>([]);
     useEffect(() => {
         const asyncFunction = async () => {
@@ -17,10 +27,23 @@ const HomeTemplate = () => {
         };
         asyncFunction();
     }, []);
+
     const [text2, setText] = useState('Quero dar um Piu');
 
     function handleClick() {
         setText(text2);
+        setPostArray([
+            {
+                text: text2,
+                image: '/assets/icon.svg',
+                user: '@nnakarol',
+                name: 'Anna Karoline',
+                like: '/assets/amei.svg',
+                rp: '/assets/rt-icon.svg',
+                comments: '/assets/balao-chat.svg'
+            },
+            ...postArray
+        ]);
         setText(' ');
     }
 
@@ -86,7 +109,7 @@ const HomeTemplate = () => {
                         {piusArray.map((post) => (
                             <MainComponent
                                 text={post.text}
-                                image="/assets/anna.svg"
+                                image={post.user.photo}
                                 user={post.user.username}
                                 name={post.user.first_name}
                                 like="3"
