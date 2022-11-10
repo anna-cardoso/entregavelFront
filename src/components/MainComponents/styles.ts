@@ -93,9 +93,13 @@ export const DeleteButton = styled.img`
     height: 24px;
     border-radius: 8px;
 `;
-export const Likes = styled.img`
+interface SelectedProps {
+    selected: boolean;
+}
+export const Likes = styled.img<SelectedProps>`
     width: 24px;
     height: 24px;
+    background: ${(props) => (props.selected ? '#ff0000' : 'none')};
 `;
 export const Rp = styled.img`
     width: 24px;
