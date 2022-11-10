@@ -29,7 +29,6 @@ const HomeTemplate = () => {
     }, []);
 
     const [text2, setText] = useState('Quero dar um Piu');
-
     function handleClick() {
         setText(text2);
         setPostArray([
@@ -100,9 +99,10 @@ const HomeTemplate = () => {
                                 value={text2}
                                 onChange={(e) => setText(e.target.value)}
                             />
-                            <S.SendButton onClick={handleClick}>
-                                Send
-                            </S.SendButton>
+                            <S.SendButton
+                                src="/assets/send.svg"
+                                onClick={handleClick}
+                            />
                         </S.PiuWriteContainer>
                     </S.SubMainContainer>
                     <S.MainCont>
@@ -112,9 +112,11 @@ const HomeTemplate = () => {
                                 image={post.user.photo}
                                 user={post.user.username}
                                 name={post.user.first_name}
-                                like="3"
-                                rp="2"
-                                comments="2"
+                                like="/assets/amei.svg"
+                                rp="/assets/rt-icon.svg"
+                                comments="/assets/balao-chat.svg"
+                                delete="/assets/notification.svg"
+                                id={post.user.id}
                             />
                         ))}
                     </S.MainCont>

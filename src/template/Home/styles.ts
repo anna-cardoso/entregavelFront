@@ -88,16 +88,11 @@ export const PiuInput = styled.input`
     background: none;
     border: none;
 `;
-export const SendButton = styled.button`
-    font-size: 16px;
-    font-weight: 100;
+export const SendButton = styled.img`
     width: 48px;
     height: 24px;
-    border: none;
-    background: #ffffff;
     border-radius: 8px;
 `;
-
 export const MainCont = styled.div`
     display: flex;
     height: 64px;

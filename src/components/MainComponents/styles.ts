@@ -88,6 +88,11 @@ export const Interactions = styled.div`
         width: 100%;
     }
 `;
+export const DeleteButton = styled.img`
+    width: 48px;
+    height: 24px;
+    border-radius: 8px;
+`;
 export const Likes = styled.img`
     width: 24px;
     height: 24px;
