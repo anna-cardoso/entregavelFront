@@ -26,10 +26,15 @@ const MainComponent: React.FC<MainComponentProps> = ({
     id
 }) => {
     const [likes, setLikes] = useState(false);
-
+    const [deleted, setDeleted] = useState(false);
     function LikeFunction() {
         setLikes(!likes);
-        api.post('/pius/like', { user_id: id });
+        api.post('/pius/like', { piu_id: id });
+    }
+    function DeleteFunction() {
+        if (user === 'annaCardoso') {
+            setDeleted(!deleted);
+        }
     }
 
     return (
@@ -50,7 +55,13 @@ const MainComponent: React.FC<MainComponentProps> = ({
                     </S.Interactions>
                     <S.Rp src={rp} />
                     <S.Comments src={comments} />
-                    <S.DeleteButton src={del} />
+                    <S.Interactions
+                        onClick={() => {
+                            DeleteFunction();
+                        }}
+                    >
+                        <S.DeleteButton src={del} selected={deleted} />
+                    </S.Interactions>
                 </S.Interactions>
             </S.PiuContainer>
         </S.Container>

@@ -3,22 +3,13 @@ import TitleComponent from 'components/TitleComponents';
 import MainComponent from 'components/MainComponents';
 import NewsComponent from 'components/NewsComponents';
 import PiuServices from 'services/PiuServices';
+import api from 'services/api';
 import { Piu } from 'interfaces/Piu';
 import { useEffect, useState } from 'react';
 import * as S from './styles';
 import { Profile } from './styles';
 
 const HomeTemplate = () => {
-    interface InterfacePosts {
-        text: string;
-        image: string;
-        user: string;
-        name: string;
-        like: string;
-        rp: string;
-        comments: string;
-    }
-    const [postArray, setPostArray] = useState<InterfacePosts[]>([]);
     const [piusArray, setPiusArray] = useState<Piu[]>([]);
     useEffect(() => {
         const asyncFunction = async () => {
@@ -28,21 +19,9 @@ const HomeTemplate = () => {
         asyncFunction();
     }, []);
 
-    const [text2, setText] = useState('Quero dar um Piu');
+    const [text2, setText] = useState('');
     function handleClick() {
-        setText(text2);
-        setPostArray([
-            {
-                text: text2,
-                image: '/assets/icon.svg',
-                user: '@nnakarol',
-                name: 'Anna Karoline',
-                like: '/assets/amei.svg',
-                rp: '/assets/rt-icon.svg',
-                comments: '/assets/balao-chat.svg'
-            },
-            ...postArray
-        ]);
+        api.post('/pius', { text2 });
         setText(' ');
     }
 
@@ -93,9 +72,10 @@ const HomeTemplate = () => {
 
                 <S.MainContainer>
                     <S.SubMainContainer>
-                        <S.Search value="Quero ouvir um Piu" />
+                        <S.Search placeholder="Quero achar um Piu" />
                         <S.PiuWriteContainer>
                             <S.PiuInput
+                                placeholder="Quero dar um piu"
                                 value={text2}
                                 onChange={(e) => setText(e.target.value)}
                             />
@@ -116,7 +96,7 @@ const HomeTemplate = () => {
                                 rp="/assets/rp-icon.svg"
                                 comments="/assets/comment.svg"
                                 delete="/assets/trash.svg"
-                                id={post.user.id}
+                                id={post.id}
                             />
                         ))}
                     </S.MainCont>

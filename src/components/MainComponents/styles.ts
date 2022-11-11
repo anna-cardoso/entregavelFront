@@ -21,6 +21,7 @@ export const PiuContainer = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    width: 50%;
 `;
 export const NameUser = styled.div`
     display: flex;
@@ -44,60 +45,86 @@ export const Text = styled.div`
     width: 100%;
 `;
 export const Image = styled.img`
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 1080px) {
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        padding-left: 4px;
+        padding-left: 16px;
     }
-
+    padding-top: 8px;
     witdh: 64px;
     height: 64px;
-    border-radius: 50%;
     padding-left: 2px;
 `;
 export const Interactions = styled.div`
     @media only screen and (min-width: 800px) {
         display: flex;
-        gap: 100px;
+        gap: 32px;
+        width: 80%;
+    }
+    @media only screen and (min-width: 900px) {
+        display: flex;
+        gap: 64px;
         width: 100%;
     }
     @media only screen and (min-width: 1080px) {
         display: flex;
-        gap: 140px;
+        gap: 96px;
         width: 100%;
     }
     @media only screen and (min-width: 1240px) {
         display: flex;
-        gap: 180px;
+        gap: 112px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1316px) {
+        display: flex;
+        gap: 120px;
         width: 100%;
     }
     @media only screen and (min-width: 1380px) {
         display: flex;
-        gap: 200px;
+        gap: 144px;
         width: 100%;
     }
     @media only screen and (min-width: 1500px) {
         display: flex;
-        gap: 280px;
+        gap: 160px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1600px) {
+        display: flex;
+        gap: 184px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1700px) {
+        display: flex;
+        gap: 200px;
         width: 100%;
     }
     @media only screen and (min-width: 1800px) {
         display: flex;
-        gap: 380px;
+        gap: 224px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 1900px) {
+        display: flex;
+        gap: 240px;
         width: 100%;
     }
 `;
-export const DeleteButton = styled.img`
+export const DeleteButton = styled.img<SelectedProps>`
     width: 48px;
     height: 24px;
     border-radius: 8px;
+    background: ${(props) => (props.selected ? '#3856DC' : 'none')};
+    border-radius: ${(props) => (props.selected ? '50%' : '0px')};
 `;
 interface SelectedProps {
     selected: boolean;
 }
 export const Likes = styled.img<SelectedProps>`
-    width: 24px;
+    width: 48px;
     height: 24px;
     background: ${(props) => (props.selected ? '#3856DC' : 'none')};
     border-radius: ${(props) => (props.selected ? '50%' : '0px')};

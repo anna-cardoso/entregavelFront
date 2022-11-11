@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainBody = styled.div`
-    height: 100vmax;
+    height: 200000px;
     display: flex;
     justify-content: center;
     background-color: #272727;

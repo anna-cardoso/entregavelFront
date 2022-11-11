@@ -12,4 +12,9 @@ export default class PiuServices {
         const response = await api.post('/pius/like');
         return response.data;
     }
+
+    static async PostPius(): Promise<Piu[]> {
+        const response = await api.post('/pius');
+        return response.data;
+    }
 }
