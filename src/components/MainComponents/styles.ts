@@ -99,7 +99,8 @@ interface SelectedProps {
 export const Likes = styled.img<SelectedProps>`
     width: 24px;
     height: 24px;
-    background: ${(props) => (props.selected ? '#ff0000' : 'none')};
+    background: ${(props) => (props.selected ? '#3856DC' : 'none')};
+    border-radius: ${(props) => (props.selected ? '50%' : '0px')};
 `;
 export const Rp = styled.img`
     width: 24px;

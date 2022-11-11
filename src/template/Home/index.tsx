@@ -113,9 +113,9 @@ const HomeTemplate = () => {
                                 user={post.user.username}
                                 name={post.user.first_name}
                                 like="/assets/amei.svg"
-                                rp="/assets/rt-icon.svg"
-                                comments="/assets/balao-chat.svg"
-                                delete="/assets/notification.svg"
+                                rp="/assets/rp-icon.svg"
+                                comments="/assets/comment.svg"
+                                delete="/assets/trash.svg"
                                 id={post.user.id}
                             />
                         ))}

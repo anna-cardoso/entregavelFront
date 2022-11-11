@@ -40,16 +40,18 @@ const MainComponent: React.FC<MainComponentProps> = ({
                     {name} {user}
                 </S.NameUser>
                 <S.Text>{text}</S.Text>
-                <S.Interactions
-                    onClick={() => {
-                        LikeFunction();
-                    }}
-                >
-                    <S.Likes src={like} selected={likes} />
+                <S.Interactions>
+                    <S.Interactions
+                        onClick={() => {
+                            LikeFunction();
+                        }}
+                    >
+                        <S.Likes src={like} selected={likes} />
+                    </S.Interactions>
+                    <S.Rp src={rp} />
+                    <S.Comments src={comments} />
+                    <S.DeleteButton src={del} />
                 </S.Interactions>
-                <S.Rp src={rp} />
-                <S.Comments src={comments} />
-                <S.DeleteButton src={del} />
             </S.PiuContainer>
         </S.Container>
     );
