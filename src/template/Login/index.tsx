@@ -1,13 +1,33 @@
 import * as S from './styles';
 
-const HomeTemplate = () => {
+const LoginTemplate = () => (
     <S.Wrapper>
         <S.Login>
-            <S.ImagemLogin src="/assets/passarinho.svg" />
+            <S.ImageBack src="/assets/BackArrow.svg" />
+            <S.AuxII>
+                <S.LoginName>Login</S.LoginName>
+                <S.EmailInput
+                    placeholder="Celular, e-mail ou nome de usuário"
+                    src="/assets/email.svg"
+                />
+                <S.PasswordInput
+                    placeholder="Senha"
+                    src="/assets/ShowPassword.svg"
+                />
+                <S.RecuperarSenha>Esqueceu sua senha?</S.RecuperarSenha>
+                <S.SignInButton>ENTRAR</S.SignInButton>
+                <S.Aux>
+                    <S.FootText>Ainda não tem uma conta?</S.FootText>
+                    <S.RecuperarSenha>Cadastre-se</S.RecuperarSenha>
+                </S.Aux>
+            </S.AuxII>
         </S.Login>
-        <S.Login>
-            <S.EntradaEmail placeholder="E-mail" />
-        </S.Login>
-    </S.Wrapper>;
-};
-export default HomeTemplate;
+        <S.LoginBackground>
+            <S.AuxII>
+                <S.ImageLogin src="/assets/passarinho.svg" />
+                <S.PiuPiuwer>PiuPiuwer</S.PiuPiuwer>
+            </S.AuxII>
+        </S.LoginBackground>
+    </S.Wrapper>
+);
+export default LoginTemplate;

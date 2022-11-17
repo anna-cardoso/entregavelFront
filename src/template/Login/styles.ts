@@ -1,33 +1,131 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    height: 10rem;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-contente: space-between;
+    flax-direction: row;
 `;
-export const Login = styled.div`
-    background: #272727;
+export const Aux = styled.div`
+    display: flex;
+    gap: 4px;
+    flex-direction: row;
+`;
+export const AuxII = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 32px 0px 0px;
-    gap: 160px;
-    width: 40%;
+    gap: 8px;
 `;
-export const EntradaEmail = styled.input`
+export const ImageBack = styled.img`
+    padding: 0px 0px 0px 32px;
+    width: 64px;
+    height: 32px;
+    position: absolute;
+    left: 32px;
+    top: 32px;
+`;
+export const Login = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    width: 40%;
+    background: #272727;
+`;
+export const LoginName = styled.div`
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    color: #ffffff;
+`;
+export const EmailInput = styled.input`
     width: 520px;
     height: 64px;
     background: #e1e7ff;
     border-radius: 16px;
     display: flex;
+    color: #55596b;
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+`;
+export const PasswordInput = styled.input`
+    width: 520px;
+    height: 64px;
+    background: #e1e7ff;
+    border-radius: 16px;
+    display: flex;
+    color: #55596b;
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+`;
+export const RecuperarSenha = styled.span`
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #7b93ff;
+`;
+export const SignInButton = styled.button`
+    width: 520px;
+    height: 64px;
+    background: #3856dc;
+    border-radius: 16px;
+    flex: none;
+    border: 0;
+    flex-grow: 0;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff; ;
+`;
+export const FootText = styled.span`
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
 `;
 export const LoginBackground = styled.div`
-    display: flex;
-    background: linear-gradient(270deg, #004c97 -0.02%, #33a8eb 99.98%);
     width: 60%;
+    height: 100%;
+    background: linear-gradient(270deg, #004c97 -0.02%, #33a8eb 99.98%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
-export const ImagemLogin = styled.img`
+export const PiuPiuwer = styled.span`
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    color: #e1e7ff;
+    bottom: 16px;
+    right: 16px;
+`;
+export const ImageLogin = styled.img`
     width: 480px;
     height: 480px;
+    position: absolute;
+    left: 56%;
+    top: 16%;
 `;
