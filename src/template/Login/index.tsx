@@ -6,14 +6,8 @@ const LoginTemplate = () => (
             <S.ImageBack src="/assets/BackArrow.svg" />
             <S.AuxII>
                 <S.LoginName>Login</S.LoginName>
-                <S.EmailInput
-                    placeholder="Celular, e-mail ou nome de usuário"
-                    src="/assets/email.svg"
-                />
-                <S.PasswordInput
-                    placeholder="Senha"
-                    src="/assets/ShowPassword.svg"
-                />
+                <S.EmailInput placeholder="Celular, e-mail ou nome de usuário" />
+                <S.PasswordInput placeholder="Senha" type="password" />
                 <S.RecuperarSenha>Esqueceu sua senha?</S.RecuperarSenha>
                 <S.SignInButton>ENTRAR</S.SignInButton>
                 <S.Aux>

@@ -24,6 +24,7 @@ export const ImageBack = styled.img`
     position: absolute;
     left: 32px;
     top: 32px;
+    cursor: pointer;
 `;
 export const Login = styled.div`
     display: flex;
@@ -79,6 +80,7 @@ export const RecuperarSenha = styled.span`
     display: flex;
     align-items: center;
     color: #7b93ff;
+    cursor: pointer;
 `;
 export const SignInButton = styled.button`
     width: 520px;
@@ -93,7 +95,8 @@ export const SignInButton = styled.button`
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    color: #ffffff; ;
+    color: #ffffff;
+    cursor: pointer;
 `;
 export const FootText = styled.span`
     font-family: 'Poppins';
