@@ -82,6 +82,15 @@ export const RecuperarSenha = styled.span`
     color: #7b93ff;
     cursor: pointer;
 `;
+export const ErrorWrapper = styled.p`
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    align-items: center;
+    color: red;
+`;
 export const SignInButton = styled.button`
     width: 520px;
     height: 64px;
