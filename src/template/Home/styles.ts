@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const MainBody = styled.div`
-    height: 100vmax;
+    height: 200000px;
     display: flex;
     justify-content: center;
     background-color: #272727;
+    width: 100%;
 `;
 export const SideBarContainer = styled.div`
     display: flex;
@@ -17,12 +18,12 @@ export const SideBarContainer = styled.div`
     border-right-style: solid;
     border-color: #55596b;
     left: 0px;
-    gap: 4px;
+    gap: 16px;
     position: fixed;
 `;
 export const NavBarContainer = styled.div`
     display: flex;
-    width: 80%;
+    width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
 `;
@@ -42,6 +43,7 @@ export const MainContainer = styled.div`
     gap: 16px;
     padding: 24px 0px 16px 0px;
     justify-content: center;
+    width: 64%;
 `;
 export const SubMainContainer = styled.div`
     display: flex;
@@ -66,7 +68,7 @@ export const Search = styled.input`
 `;
 export const PiuWriteContainer = styled.div`
     display: flex;
-    width: 800px;
+    width: 100%;
     height: 128px;
     padding: 8px 24px 8px 32px;
     justify-content: space-between;
@@ -86,25 +88,10 @@ export const PiuInput = styled.input`
     background: none;
     border: none;
 `;
-export const SendButton = styled.button`
-    font-size: 16px;
-    font-weight: 100;
+export const SendButton = styled.img`
     width: 48px;
     height: 24px;
-    border: none;
-    background: #ffffff;
-`;
-export const PiuImageContainer = styled.button`
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    flex-direction: row;
-    background-image: src= '/assets/send.svg';
-    position: right;
-`;
-export const PiuWriteButton = styled.img`
-    width: 16px;
-    height: 16px;
+    border-radius: 8px;
 `;
 export const MainCont = styled.div`
     display: flex;
@@ -113,6 +100,7 @@ export const MainCont = styled.div`
     flex-direction: column;
     justify-content: space-between;
     gap: 32px;
+    width: 100%;
 `;
 // News containers
 export const NewsContainer = styled.div`
@@ -124,7 +112,8 @@ export const NewsContainer = styled.div`
     padding: 8px 32px 8px 0px;
     background-color: #272727;
     position: fixed;
-    top: 0px;
+    overflow-y: scrow;
+    margin-top: 40px;
     right: 0px;
     border-left-width: 2px;
     border-left-style: solid;

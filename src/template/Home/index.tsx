@@ -2,77 +2,26 @@ import NavComponent from 'components/NavComponents';
 import TitleComponent from 'components/TitleComponents';
 import MainComponent from 'components/MainComponents';
 import NewsComponent from 'components/NewsComponents';
-
-import { useState } from 'react';
+import PiuServices from 'services/PiuServices';
+import api from 'services/api';
+import { Piu } from 'interfaces/Piu';
+import { useEffect, useState } from 'react';
 import * as S from './styles';
 import { Profile } from './styles';
 
 const HomeTemplate = () => {
-    interface InterfacePosts {
-        text: string;
-        image: string;
-        user: string;
-        name: string;
-        like: string;
-        rp: string;
-        comments: string;
-    }
+    const [piusArray, setPiusArray] = useState<Piu[]>([]);
+    useEffect(() => {
+        const asyncFunction = async () => {
+            const response = await PiuServices.getPius();
+            setPiusArray(response);
+        };
+        asyncFunction();
+    }, []);
 
-    const [postArray, setPostArray] = useState<InterfacePosts[]>([
-        {
-            text: 'only love can hurt like this... only love can hurt like this',
-            image: '/assets/artur.svg',
-            user: '@artadsm',
-            name: 'Artur Anacleto',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        },
-        {
-            text: 'NÃO há imoralidade em furar a fila do bandejão quem não defende é porque não tem amigos',
-            image: '/assets/pedro.svg',
-            user: '@pebaiano',
-            name: 'Pedro Souza',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        },
-
-        {
-            text: 'oiiiii (na intencao de furar a fila do bandejao',
-            image: '/assets/anna.svg',
-            user: '@nnakarol',
-            name: 'Anna Karoline',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        },
-        {
-            text: '3,14159265358979323846164338327950288419726939937510582',
-            image: '/assets/artur2.svg',
-            user: '@Ntutsdoscrias',
-            name: 'Arthur Maia',
-            like: '/assets/amei.svg',
-            rp: '/assets/rt-icon.svg',
-            comments: '/assets/balao-chat.svg'
-        }
-    ]);
-    const [text2, setText] = useState('Quero dar um Piu');
-
+    const [text2, setText] = useState('');
     function handleClick() {
-        setText(text2);
-        setPostArray([
-            {
-                text: text2,
-                image: '/assets/icon.svg',
-                user: '@nnakarol',
-                name: 'Anna Karoline',
-                like: '/assets/amei.svg',
-                rp: '/assets/rt-icon.svg',
-                comments: '/assets/balao-chat.svg'
-            },
-            ...postArray
-        ]);
+        api.post('/pius', { text2 });
         setText(' ');
     }
 
@@ -123,27 +72,31 @@ const HomeTemplate = () => {
 
                 <S.MainContainer>
                     <S.SubMainContainer>
-                        <S.Search value="Quero ouvir um Piu" />
+                        <S.Search placeholder="Quero achar um Piu" />
                         <S.PiuWriteContainer>
                             <S.PiuInput
+                                placeholder="Quero dar um piu"
                                 value={text2}
                                 onChange={(e) => setText(e.target.value)}
                             />
-                            <S.SendButton onClick={handleClick}>
-                                Send
-                            </S.SendButton>
+                            <S.SendButton
+                                src="/assets/send.svg"
+                                onClick={handleClick}
+                            />
                         </S.PiuWriteContainer>
                     </S.SubMainContainer>
                     <S.MainCont>
-                        {postArray.map((post) => (
+                        {piusArray.map((post) => (
                             <MainComponent
                                 text={post.text}
-                                image={post.image}
-                                user={post.user}
-                                name={post.name}
-                                like={post.like}
-                                rp={post.rp}
-                                comments={post.comments}
+                                image={post.user.photo}
+                                user={post.user.username}
+                                name={post.user.first_name}
+                                like="/assets/amei.svg"
+                                rp="/assets/rp-icon.svg"
+                                comments="/assets/comment.svg"
+                                delete="/assets/trash.svg"
+                                id={post.id}
                             />
                         ))}
                     </S.MainCont>
